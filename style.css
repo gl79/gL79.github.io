@@ -1,0 +1,17 @@
+.jumbotron {
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+  background-color: blue;
+}
+
+#About {
+  background-color: rgb(0, 115, 247);
+}
+
+#loving {
+  background-color: rgb(0, 149, 248);
+}
+
+#Contact {
+  background-color: rgb(161, 0, 161);
+}
