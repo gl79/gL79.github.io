@@ -242,18 +242,18 @@
       type: 'bullets',
       clickable: true
     }
+    
   });
-
-})()
-
-var i = 0,text,text1;
-text = "Colleger & Freelancer also a Web Developer"
-
-function typing(){
-  if(i<text.length){
-    document.getElementById("text").innerHTML += text.charAt(i);
-    i++;
-    setTimeout(typing, 100);
+  
+  var i = 0,text,text1;
+  text = "Colleger & Freelancer also a Web Developer"
+  
+  function typing(){
+    if(i<text.length){
+      document.getElementById("text").innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typing, 100);
+    }
   }
-}
-typing();
+  typing();
+})()
