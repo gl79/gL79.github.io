@@ -4,16 +4,47 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Start your development with Meyawo landing page.">
-    <meta name="author" content="Devcrud">
-    <title>Gery Liam's</title>
+
+    <meta name="description"
+        content="Gery Liam - Full Stack Web Developer & Project Manager with 3+ years experience. Expert in PHP, JavaScript, MySQL, API integration, and project leadership. Based in Tasikmalaya.">
+    <meta name="keywords"
+        content="Gery Liam, Full Stack Developer, Web Developer, Project Manager, PHP, JavaScript, MySQL, Laravel, Bootstrap, IT Support, Tasikmalaya">
+    <meta name="author" content="Gery Liam">
+    <meta property="og:title" content="Gery Liam - Full Stack Web Developer & Project Manager">
+    <meta property="og:description"
+        content="Experienced web developer & project manager skilled in PHP, JavaScript, MySQL, API integration, and project leadership based in Tasikmalaya.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gl79.github.io">
+    <meta property="og:image" content="https://gl79.github.io/assets/imgs/man.png">
+    <meta property="og:image:alt" content="Gery Liam Portrait">
+    <meta property="og:locale" content="id_ID">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- untuk kompatibilitas IE -->
+    <meta name="robots" content="index, follow"> <!-- untuk mengarahkan crawler mesin pencari -->
+    <link rel="canonical" href="https://gl79.github.io"> <!-- URL utama canonical -->
+    <meta name="theme-color" content="#695aa6"> <!-- warna tema browser di mobile -->
+    <meta name="twitter:card" content="summary_large_image"> <!-- untuk Twitter card -->
+    <meta name="twitter:title" content="Gery Liam | Full Stack Web Developer & Project Manager">
+    <meta name="twitter:description"
+        content="Experienced web developer & project manager skilled in PHP, JavaScript, MySQL, API integration, and project leadership based in Tasikmalaya.">
+    <meta name="twitter:image" content="https://gl79.github.io/assets/imgs/man.png">
+
+    <title>Gery Liam | Full Stack Web Developer & Project Manager</title>
+
     <!-- font icons -->
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <!-- Bootstrap + Meyawo main styles -->
     <link rel="stylesheet" href="assets/css/meyawo.css">
+    <link href="assets/imgs/favicon.png" rel="icon">
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    <!-- Loader -->
+    <div id="loader">
+        <div class="spinner"></div>
+        <h2 id="typing-text"></h2>
+    </div>
 
     <!-- Page Navbar -->
     <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
@@ -27,10 +58,22 @@
                     <a class="link" href="#about">About</a>
                 </li>
                 <li class="item">
+                    <a class="link" href="#skills">Skills</a>
+                </li>
+                <li class="item">
                     <a class="link" href="#service">Service</a>
                 </li>
                 <li class="item">
-                    <a class="link" href="#portfolio">Project & Portofolio</a>
+                    <a class="link" href="#pricing">Pricing</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#portfolio">Project</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#faq">FAQ</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#contact">Contact</a>
                 </li>
             </ul>
             <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
@@ -47,11 +90,15 @@
         <div class="header-content container">
             <h1 class="header-title">
                 <span class="up">HI!</span>
-                <span class="down">I am Gery Pratama Putra</span>
+                <span id="typed-name"></span><br>
+                <span id="typed-loop"></span>
             </h1>
-            <p class="header-subtitle">WEB DEVELOPER</p>
+            <!-- kalau mau, kamu bisa sembunyikan subtitle asli agar diganti dengan typed -->
+            <!-- <p class="header-subtitle" style="display:none;">Full Stack Web Developer & Project Manager</p> -->
 
-            <a href="./assets/CV & Resume.pdf" target="_blank"><button class="btn-rounded btn btn-primary">Download CV & Resume</button></a>
+            <a href="./assets/CV & Resume.pdf" target="_blank" data-aos="fade-up" data-aos-duration="800">
+                <button class="btn-rounded btn btn-primary">Download CV</button>
+            </a>
         </div>
     </header><!-- end of page header -->
 
@@ -61,16 +108,18 @@
         <div class="container text-center">
             <!-- about wrapper -->
             <div class="about">
-                <div class="about-img-holder">
-                    <img src="assets/imgs/man.png" class="about-img"
-                        alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                <div class="about-img-holder" data-aos="fade-right">
+                    <img src="assets/imgs/man.png" class="about-img float" alt="">
                 </div>
-                <div class="about-caption">
+                <div class="about-caption" data-aos="fade-left" data-aos-delay="200">
                     <p class="section-subtitle">Who Am I ?</p>
                     <h2 class="section-title mb-3">About Me</h2>
                     <p>
-                        Fresh Graduate Informatics Engineering | 2 Years Experience as Freelancer Web Developer & Project Manager | 1 Year as IT Support & Admin Officer | Passionate in Web Development & Technology | Blockchain Enthusiast 
-                        <br>
+                        Over 3 years of experience as a Freelance Web Developer and Project Manager, specializing in
+                        PHP, JavaScript, MySQL, and API integration. Proven ability to design and implement systems that
+                        automate business processes, increase operational efficiency by up to 80%, and reduce human
+                        error. Experienced in remote collaboration and passionate about Web Development, emerging
+                        technologies, and blockchain innovation.
                     </p>
                     <a href="#portfolio"><button class="btn-rounded btn btn-primary">Visit My Projects</button></a>
                 </div>
@@ -78,54 +127,105 @@
         </div><!-- end of container -->
     </section> <!-- end of about section -->
 
+    <!-- Skills & Expertise Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Skills & Expertise</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                My technical skills and level of expertise
+            </p>
+
+            <div class="skills-wrapper" data-aos="fade-up" data-aos-delay="200">
+                <div class="skill">
+                    <h5>Artificial Intelligence</h5>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%;" data-progress="95"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <h5>PHP</h5>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%;" data-progress="90"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <h5>JavaScript</h5>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%;" data-progress="85"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <h5>MySQL</h5>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%;" data-progress="80"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <h5>Laravel</h5>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%;" data-progress="75"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <h5>API Integration</h5>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%;" data-progress="70"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- service section -->
     <section class="section" id="service">
         <div class="container text-center">
-            <p class="section-subtitle">What I Do ?</p>
-            <h6 class="section-title mb-6">Service</h6>
+            <p class="section-subtitle" data-aos="fade-up">What I Do ?</p>
+            <h6 class="section-title mb-6" data-aos="fade-up" data-aos-delay="100">Service</h6>
             <!-- row -->
             <div class="row">
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
                     <div class="service-card">
                         <div class="body">
-                            <img src=" assets/imgs/responsive.svg"
-                                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
-                                class="icon">
+                            <img src=" assets/imgs/responsive.svg" alt="" class="icon">
                             <h6 class="title">Web Development & Custom</h6>
-                            <p class="subtitle">Build a professional and functional website according to your needs, with responsive design and optimal performance.</p>
+                            <p class="subtitle">Build a professional and functional website according to your needs,
+                                with responsive design and optimal performance.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
                     <div class="service-card">
                         <div class="body">
-                            <img src="assets/imgs/analytics.svg"
-                                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
-                                class="icon">
+                            <img src="assets/imgs/analytics.svg" alt="" class="icon">
                             <h6 class="title">Web Service & Business</h6>
-                            <p class="subtitle">Complete web services, including system integration, content management, and the latest technology solutions for your business.</p>
+                            <p class="subtitle">Complete web services, including system integration, content management,
+                                and the latest technology solutions for your business.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
                     <div class="service-card">
                         <div class="body">
-                            <img src="assets/imgs/analytics.svg"
-                                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
-                                class="icon">
+                            <img src="assets/imgs/analytics.svg" alt="" class="icon">
                             <h6 class="title">Web Landing Page & Profil Company</h6>
-                            <p class="subtitle">Creating engaging landing pages and company profile pages that effectively portray your business identity.</p>
+                            <p class="subtitle">Creating engaging landing pages and company profile pages that
+                                effectively portray your business identity.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="500">
                     <div class="service-card">
                         <div class="body">
-                            <img src="assets/imgs/toolbox.svg"
-                                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
-                                class="icon">
+                            <img src="assets/imgs/toolbox.svg" alt="" class="icon">
                             <h6 class="title">IT Support & Administration Officer</h6>
-                            <p class="subtitle">Providing reliable IT support and efficient administration services to ensure the smooth operation of your business.</p>
+                            <p class="subtitle">Providing reliable IT support and efficient administration services to
+                                ensure the smooth operation of your business.</p>
                         </div>
                     </div>
                 </div>
@@ -133,56 +233,158 @@
         </div>
     </section><!-- end of service section -->
 
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="pricing">
+        <h2 data-aos="fade-up">Pricing Plans</h2>
+        <p class="subtitle" data-aos="fade-up" data-aos-delay="100">Choose the plan that fits your project needs</p>
+
+        <div class="pricing-cards">
+            <div class="pricing-card" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="pricing-title">Basic</h3>
+                <p class="pricing-price">IDR 1,500,000</p>
+                <p class="pricing-start">Starting Price</p>
+                <div class="pricing-features">
+                    <ul>
+                        <li>Max 3 pages websites</li>
+                        <li>Responsive design</li>
+                        <li>Basic SEO optimization</li>
+                        <li>Contact form</li>
+                        <li>Free domain setup assistance</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/6289519211164" class="btn-pricing">Order Now</a>
+            </div>
+
+            <div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
+                <h3 class="pricing-title">Standard</h3>
+                <p class="pricing-price">IDR 3,000,000</p>
+                <p class="pricing-start">Starting Price</p>
+                <div class="pricing-features">
+                    <ul>
+                        <li>Max 6 pages websites</li>
+                        <li>Responsive design</li>
+                        <li>Advanced SEO optimization</li>
+                        <li>Contact form & newsletter signup</li>
+                        <li>Free SSL & domain setup assistance</li>
+                        <li>Performance optimization</li>
+                        <li>Max 1 revision</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/6289519211164" class="btn-pricing">Order Now</a>
+            </div>
+
+            <div class="pricing-card" data-aos="fade-up" data-aos-delay="400">
+                <h3 class="pricing-title">Premium</h3>
+                <p class="pricing-price">IDR 6,000,000</p>
+                <p class="pricing-start">Starting Price</p>
+                <div class="pricing-features">
+                    <ul>
+                        <li>Up to 9 pages websites</li>
+                        <li>Responsive design</li>
+                        <li>Full SEO & analytics integration</li>
+                        <li>Payment gateway setup</li>
+                        <li>API integrations</li>
+                        <li>Free SSL, domain & hosting setup</li>
+                        <li>Priority 24/7 support</li>
+                        <li>Performance optimization</li>
+                        <li>Training & documentation</li>
+                        <li>Max 3 revisions</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/6289519211164" class="btn-pricing">Order Now</a>
+            </div>
+        </div>
+    </section>
+
     <!-- portfolio section -->
     <section class="section" id="portfolio">
         <div class="container text-center">
-            <p class="section-subtitle">What I Did ?</p>
-            <h6 class="section-title mb-6">Projects & Portfolio</h6>
+            <p class="section-subtitle" data-aos="fade-up">What I Did ?</p>
+            <h6 class="section-title mb-6" data-aos="fade-up" data-aos-delay="100">Projects & Portfolio</h6>
             <!-- row -->
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
                     <a href="https://gapuraningrahayu.co.id/" target="_blank" class="portfolio-card">
-                        <img src="assets/imgs/gr.png" class="portfolio-card-img"
-                            alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                        <img src="assets/imgs/gr.png" class="portfolio-card-img" alt="">
                         <span class="portfolio-card-overlay">
                             <span class="portfolio-card-caption">
-                                <h4>PT Gapuraning Rahayu</h5>
-                                    <p class="font-weight-normal">Web Profil Company</p>
+                                <h4>PT Gapuraning Rahayu</h4>
+                                <p class="font-weight-normal">Web Profil Company</p>
                             </span>
                         </span>
                     </a>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
                     <a href="https://www.kautsarmotivatour.com/" target="_blank" class="portfolio-card">
-                        <img class="portfolio-card-img" src="assets/imgs/km.png" class="img-responsive rounded"
-                            alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                        <img src="assets/imgs/km.png" class="portfolio-card-img" alt="">
                         <span class="portfolio-card-overlay">
                             <span class="portfolio-card-caption">
-                                <h4>PT Kautsar Grup Internasional</h5>
-                                    <p class="font-weight-normal">Web Profil Company & System Development</p>
-                            </span>
-                        </span>
-                    </a>
-                </div> <!-- Write your comments here 
-                <div class="col-md-4">
-                    <a href="#" class="portfolio-card">
-                        <img class="portfolio-card-img" src="assets/imgs/folio-3.jpg" class="img-responsive rounded"
-                            alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
-                        <span class="portfolio-card-overlay">
-                            <span class="portfolio-card-caption">
-                                <h4>Web Designing</h5>
-                                    <p class="font-weight-normal">Category: Web Templates</p>
+                                <h4>PT Kautsar Grup Internasional</h4>
+                                <p class="font-weight-normal">Web Profil Company & System Development</p>
                             </span>
                         </span>
                     </a>
                 </div>
-                -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                    <a href="https://zeps-media-smm.my.id/" target="_blank" class="portfolio-card">
+                        <img src="assets/imgs/zeps.png" class="portfolio-card-img" alt="">
+                        <span class="portfolio-card-overlay">
+                            <span class="portfolio-card-caption">
+                                <h4>Zeps Media Social Media Marketing</h4>
+                                <p class="font-weight-normal">Web Profil Company & System Development</p>
+                            </span>
+                        </span>
+                    </a>
+                </div>
             </div><!-- end of row -->
         </div><!-- end of container -->
     </section> <!-- end of portfolio section -->
 
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq" style="padding: 60px 20px; background-color: #f9f9f9;">
+        <div class="container">
+            <h2 data-aos="fade-up">Frequently Asked Questions</h2>
+            <p class="subtitle" data-aos="fade-up" data-aos-delay="100">Got questions? We’ve got answers.</p>
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                <h4 class="faq-question">What does “Starting Price” mean?</h4>
+                <p class="faq-answer">The prices listed are base rates for the project scope described. Additional
+                    features or custom
+                    requests may increase the cost.</p>
+            </div>
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                <h4 class="faq-question">How many revisions can I request?</h4>
+                <p class="faq-answer">The revision limits are specified in each plan. If you need more revisions, we can
+                    discuss custom
+                    packages.</p>
+            </div>
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                <h4 class="faq-question">Do you provide hosting and domain services?</h4>
+                <p class="faq-answer">For Standard and Premium plans, free assistance with domain setup and SSL is
+                    included. Hosting setup
+                    is available with Premium plan.</p>
+            </div>
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+                <h4 class="faq-question">What is your typical project timeline?</h4>
+                <p class="faq-answer">Timelines depend on project scope, but typically Basic projects take 1-2 weeks,
+                    Standard 2-4 weeks,
+                    and Premium 4+ weeks.</p>
+            </div>
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
+                <h4 class="faq-question">How do I get started?</h4>
+                <p class="faq-answer">Simply click the “Order Now” button on your preferred plan or contact us directly
+                    via WhatsApp.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- section -->
-    <section class="section-sm bg-primary">
+    <section class="section-sm bg-primary" id="contact">
         <!-- container -->
         <div class="container text-center text-sm-left">
             <!-- row -->
@@ -192,29 +394,49 @@
                     <p class="m-0 text-light">Always feel Free to Contact & Discuss</p>
                 </div>
                 <div class="col-sm offset-sm-2 offset-md-3">
-                    <a href="https://wa.me/6289519211164?text=Hello,%20I'm%20interested%20creating%20a%20website%20and%20would%20like%20to%20discuss%20this%20projects%20with%20you.%20 Can%20you%20help%20 ?" target="_blank"><button class="btn btn-lg my-font btn-light rounded">Hire Me</button></a>   
+                    <a href="https://wa.me/6289519211164?text=Hello,%20I'm%20interested%20creating%20a%20website%20and%20would%20like%20to%20discuss%20this%20projects%20with%20you.%20 Can%20you%20help%20 ?"
+                        target="_blank"><button class="btn btn-lg my-font btn-light rounded">Hire Me</button></a>
                 </div>
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </section> <!-- end of section -->
 
-    <!-- footer -->
     <div class="container">
         <footer class="footer">
-            <p class="mb-0">Copyright
-                <script>document.write(new Date().getFullYear())</script> &copy; <a
-                    href="https://www.instagram.com/gery.liam/" target="_blank">All Right Reserved </a> <a
-                    href="https://www.instagram.com/gery.liam/" target="_blank">Gery Liam</a>
+            <p class="mb-0 animated-rgb"> &copy;
+                <a href="https://www.instagram.com/gery.liam/" target="_blank" class="animated-purple-indigo">
+                    All Right Reserved
+                </a>
+                <script>document.write(new Date().getFullYear())</script>
+            </p>
+            <p class="mb-0 mt-2">
+                <a href="https://www.instagram.com/gery.liam/" target="_blank" class="animated-rgb">
+                    Made With <span class="heart">&#10084;</span> <!-- Unicode heart, tidak berwarna -->
+                    by Gery Liam
+                </a>
             </p>
             <div class="social-links text-right m-auto ml-sm-auto">
-                <a href="https://www.linkedin.com/in/gery-liam/" class="link" target="_blank"><i class="ti-linkedin"></i></a>
-                <a href="https://www.instagram.com/gery.liam/" target="_blank" class="link"><i class="ti-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/gery-liam/" class="link" target="_blank"><i
+                        class="ti-linkedin"></i></a>
+                <a href="https://www.instagram.com/gery.liam/" target="_blank" class="link"><i
+                        class="ti-instagram"></i></a>
                 <a href="https://facebook.com/gery.liam/" target="_blank" class="link"><i class="ti-facebook"></i></a>
-                <a href="https://www.youtube.com/@Sigeel7/videos" class="link" target="_blank"><i class="ti-youtube"></i></a>
+                <a href="https://www.youtube.com/@Sigeel7/videos" class="link" target="_blank"><i
+                        class="ti-youtube"></i></a>
                 <a href="https://github.com/gl79" class="link" target="_blank"><i class="ti-github"></i></a>
             </div>
         </footer>
-    </div> <!-- end of page footer -->
+    </div>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/6289519211164" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i class="ti-mobile" style="font-size:28px; color:white;"></i>
+    </a>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" title="Go to top">
+        <i class="ti-arrow-up"></i>
+    </button>
 
     <!-- core  -->
     <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
@@ -225,6 +447,37 @@
 
     <!-- Meyawo js -->
     <script src="assets/js/meyawo.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,   // durasi animasi (ms)
+            easing: 'ease-in-out',  // tipe easing animasi
+            once: true       // animasi hanya sekali saat scroll ke elemen
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        // Ketikan pertama sekali saja
+        var typedName = new Typed('#typed-name', {
+            strings: ["I am Gery Liam"],
+            typeSpeed: 60,
+            showCursor: false,
+            onComplete: function () {
+                // Setelah selesai, mulai ketik kalimat looping di elemen lain
+                var typedLoop = new Typed('#typed-loop', {
+                    strings: ["Full Stack Web Developer", "Software Engineer", "AI Engineer", "Project Manager", "Blockchain Enthusiast"],
+                    typeSpeed: 60,
+                    backSpeed: 40,
+                    backDelay: 1500,
+                    loop: true,
+                    showCursor: true,
+                    cursorChar: '|'
+                });
+            }
+        });
+    </script>
 
 </body>
 
