@@ -12232,3 +12232,463 @@ pre .code {
 .section-lg {
   padding: 100px 0 !important;
 }
+
+.whatsapp-float {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 90px;
+  right: 20px;
+  background-color: #695aa6; /* warna indigo */
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 28px;
+  line-height: 50px;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transition: background-color 0.3s;
+}
+
+.whatsapp-float:hover {
+  background-color: #59468b; /* warna indigo gelap saat hover */
+  text-decoration: none;
+  color: white;
+}
+
+#scrollTopBtn {
+  display: none; /* Hidden by default */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: #695aa6; /* default background indigo */
+  border: none;
+  outline: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(105, 90, 166, 0.5);
+  transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#scrollTopBtn i {
+  font-size: 24px;
+  color: white !important; /* icon putih */
+  transition: color 0.3s;
+  line-height: 1;
+}
+
+#scrollTopBtn:hover {
+  background-color: #4b3b85; /* warna indigo lebih gelap saat hover */
+}
+
+#scrollTopBtn:hover i {
+  color: #ddd !important;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animated-purple-indigo {
+  background: linear-gradient(
+    90deg,
+    #6a0dad,   /* purple */
+    #4b0082,   /* indigo */
+    #f0f0f5,   /* putih lembut, mirip #f0f0f5 */
+    #6a0dad    /* ulang purple supaya loop mulus */
+  );
+  background-size: 400% auto; /* sama seperti animated-gradient */
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: purpleIndigoFlow 12s ease-in-out infinite;
+  font-weight: bold;
+}
+
+@keyframes purpleIndigoFlow {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+.animated-rgb {
+  background: linear-gradient(
+    90deg,
+    red,
+    orange,
+    yellow,
+    green,
+    cyan,
+    blue,
+    violet,
+    red /* loop ulang */
+  );
+  background-size: 800% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: rgbFlow 15s linear infinite;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+@keyframes rgbFlow {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+.heart {
+  color: purple;
+}
+
+  /* Pricing Section Styles */
+  .pricing-section {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+  }
+
+  .pricing-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .pricing-section p.subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    color: #666;
+  }
+
+  .pricing-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .pricing-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(105, 90, 166, 0.15);
+    flex: 1 1 280px;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 25px;
+    transition: transform 0.3s ease;
+  }
+
+  .pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(105, 90, 166, 0.3);
+  }
+
+  .pricing-card.featured {
+    border: 3px solid #695aa6;
+  }
+
+  .pricing-title {
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+    color: #444;
+    font-weight: 700;
+  }
+
+  .pricing-price {
+    font-size: 2.5rem;
+    color: #695aa6;
+    font-weight: 900;
+    margin: 0 0 8px 0;
+  }
+
+  .pricing-start {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 25px;
+  }
+
+  .pricing-features {
+    flex-grow: 1;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+
+  .pricing-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .pricing-features li {
+    padding-left: 24px;
+    margin-bottom: 14px;
+    position: relative;
+    font-size: 1rem;
+    color: #555;
+  }
+
+  .pricing-features li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: #695aa6;
+    font-weight: bold;
+  }
+
+  .btn-pricing {
+    background-color: #695aa6;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .btn-pricing:hover {
+    background-color: #574a8d;
+  }
+
+  @media (max-width: 768px) {
+    .pricing-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+    .pricing-card {
+      max-width: 100%;
+    }
+  }
+
+  /* FAQ Section */
+.faq-section {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.faq-section h2 {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+  color: #4b3f72; /* indigo-ish */
+}
+
+.faq-section .subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.faq-item {
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgb(0 0 0 / 0.1);
+  padding: 25px 30px;
+  transition: box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+  box-shadow: 0 6px 25px rgb(0 0 0 / 0.15);
+}
+
+.faq-item h4 {
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: #2f2559; /* darker indigo */
+  cursor: pointer;
+}
+
+.faq-item p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+  margin: 0;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  padding: 0 0;
+  margin: 0;
+  color: #555;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 500px; /* cukup besar supaya semua text terlihat */
+  padding: 15px 0 0 0;
+}
+
+.section {
+  padding: 60px 0;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  color: #695aa6;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #3a3a3a;
+}
+
+.skills-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.skill {
+  margin-bottom: 30px;
+}
+
+.skill h5 {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #eee;
+  border-radius: 25px;
+  overflow: hidden;
+  height: 18px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #695aa6, #8e7be8);
+  border-radius: 25px 0 0 25px;
+  transition: width 1.2s ease-in-out;
+}
+
+ /* Basic container styling */
+ .section {
+  padding: 60px 15px;
+}
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 0.3rem;
+  font-weight: 700;
+  color: #4b3b89;
+}
+.section-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #6c63ff;
+}
+
+/* Skills wrapper */
+.skills-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Each skill */
+.skill {
+  margin-bottom: 20px;
+}
+.skill h5 {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #3b2f73;
+}
+
+/* Progress bar container */
+.progress-bar {
+  background: #e0e0e0;
+  border-radius: 25px;
+  height: 18px;
+  overflow: hidden;
+}
+
+/* Progress fill */
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #695aa6, #8e7be8);
+  border-radius: 25px 0 0 25px;
+  width: 0;
+  transition: width 1.5s ease-in-out;
+}
+
+#loader {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #f5f5f7; /* putih soft */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.spinner {
+  border: 6px solid #d1c4e9;
+  border-top: 6px solid #4B0082;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  animation: spin 1.5s linear infinite;
+  margin-bottom: 25px;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#typing-text {
+  color: #4B0082;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2.2rem;
+  font-weight: 900;
+  letter-spacing: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #4B0082;
+  animation: blinkCursor 1s steps(2, start) infinite;
+}
+
+@keyframes blinkCursor {
+  0%, 100% { border-color: #4B0082; }
+  50% { border-color: transparent; }
+}
+
+html {
+  scroll-behavior: smooth;
+}
